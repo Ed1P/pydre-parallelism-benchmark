@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Benchmark runtime outputs (raw)
+benchmarks/results/
+benchmarks/output/
+benchmarks/data/
+
+# IDE
+.idea/
+.vscode/
+
+# Temp files
+*.log
+*.tmp
