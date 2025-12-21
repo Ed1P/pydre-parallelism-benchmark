@@ -1,0 +1,13 @@
+project_file,mode,workers,file_count,total_time,rank
+benchmark/projects/heavy.toml,threading,8,5,0.1586,1
+benchmark/projects/heavy.toml,multiprocessing,1,5,1.1192,2
+benchmark/projects/heavy.toml,sequential,1,5,1.5766,3
+benchmark/projects/light.toml,threading,24,5,0.0869,1
+benchmark/projects/light.toml,sequential,1,5,0.6102,2
+benchmark/projects/light.toml,multiprocessing,1,5,0.9658,3
+benchmark/projects/medium.toml,threading,12,5,0.1108,1
+benchmark/projects/medium.toml,multiprocessing,1,5,1.0119,2
+benchmark/projects/medium.toml,sequential,1,5,1.0142,3
+benchmark/projects/roi_heavy.toml,threading,24,5,0.1446,1
+benchmark/projects/roi_heavy.toml,multiprocessing,2,5,1.0404,2
+benchmark/projects/roi_heavy.toml,sequential,1,5,1.2847,3

@@ -1,0 +1,13 @@
+project_file,mode,timestamp,workers,file_count,total_time,cpu_avg,peak_memory
+benchmark/projects/medium.toml,multiprocessing,2025-12-02T12:45:27.382654,1,5,1.0119,35.5,317.73
+benchmark/projects/heavy.toml,sequential,2025-12-02T12:47:49.528553,1,5,1.5766,49.86,395.76
+benchmark/projects/roi_heavy.toml,multiprocessing,2025-12-02T12:51:27.759203,2,5,1.0404,27.48,514.14
+benchmark/projects/medium.toml,sequential,2025-12-02T12:45:25.442410,1,5,1.0142,56.68,567.98
+benchmark/projects/light.toml,multiprocessing,2025-12-02T12:43:44.499862,1,5,0.9658,58.12,301.32
+benchmark/projects/light.toml,sequential,2025-12-02T12:43:42.812618,1,5,0.6102,52.64,171.47
+benchmark/projects/heavy.toml,threading,2025-12-02T12:47:50.401722,8,5,0.1586,78.6,469.35
+benchmark/projects/roi_heavy.toml,threading,2025-12-02T12:51:25.651501,24,5,0.1446,87.3,514.11
+benchmark/projects/light.toml,threading,2025-12-02T12:43:43.533894,24,5,0.0869,77.8,301.11
+benchmark/projects/medium.toml,threading,2025-12-02T12:45:26.137466,12,5,0.1108,76.2,311.14
+benchmark/projects/roi_heavy.toml,sequential,2025-12-02T12:51:24.468752,1,5,1.2847,62.96,759.6
+benchmark/projects/heavy.toml,multiprocessing,2025-12-02T12:47:52.025541,1,5,1.1192,27.72,485.35
