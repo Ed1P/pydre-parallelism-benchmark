@@ -1,0 +1,27 @@
+[config]
+datafiles = ["../data/*.dat"]
+infer_schema_length = 3000
+
+[rois.time_general]
+type = "time"
+filename = "../project_files/rois/test_time_1.csv"
+
+[rois.time_specific]
+type = "time"
+filename = "../project_files/rois/test_time_2.csv"
+
+[rois.space]
+type = "space"
+filename = "../project_files/rois/test_space_roi.csv"
+
+[rois.column]
+type = "column"
+columnname = "CriticalEventStatus"
+
+[metrics.meanVelocity]
+function = "colMean"
+var = "Velocity"
+
+[metrics.meanXPos]
+function = "colMean"
+var = "XPos"

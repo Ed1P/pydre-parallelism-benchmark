@@ -1,0 +1,35 @@
+[config]
+datafiles = ["../data/*.dat"]
+infer_schema_length = 2000
+
+[rois.time1]
+type = "time"
+filename = "../project_files/rois/test_time_1.csv"
+
+[rois.time2]
+type = "time"
+filename = "../project_files/rois/test_time_2.csv"
+
+[rois.space]
+type = "space"
+filename = "../project_files/rois/test_space_roi.csv"
+
+[metrics.meanVelocity]
+function = "colMean"
+var = "Velocity"
+
+[metrics.meanLonAccel]
+function = "colMean"
+var = "LonAccel"
+
+[metrics.meanLatAccel]
+function = "colMean"
+var = "LatAccel"
+
+[metrics.meanHeadwayTime]
+function = "colMean"
+var = "HeadwayTime"
+
+[metrics.meanLaneOffset]
+function = "colMean"
+var = "LaneOffset"

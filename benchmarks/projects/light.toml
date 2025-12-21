@@ -1,0 +1,15 @@
+[config]
+datafiles = ["../data/*.dat"]
+infer_schema_length = 1000
+
+[rois.time1]
+type = "time"
+filename = "../project_files/rois/test_time_1.csv"
+
+[metrics.meanVelocity]
+function = "colMean"
+var = "Velocity"
+
+[metrics.meanXPos]
+function = "colMean"
+var = "XPos"
